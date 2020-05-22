@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro";
+  text-rendering: optimizelegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html, body {
+  height: 100vh;
+}
+
+body {
+  background: #ffcccc;
+  padding: 0 50px;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: blue; */
+}
+
+.header > h1 {
+  font-size: 2.5rem;
+  color: #e96a6a;
+  cursor: pointer;
+}
+
+.header > i {
+  font-size: 2.2rem;
+  color: #e96a6a;
+  cursor: pointer;
+}
+
+main {
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+}
+
+main > h1 {
+  text-align: center;
+  font-size: 28px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+main > .list-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 70px 0;
+  /* background-color: green; */
+}
+
+main > .list-container > .swiper-container {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0 70px;
+  /* background-color: tomato; */
+}
+
+main > .list-container > .swiper-container > .swiper-wrapper {
+  align-items: center;
+  visibility: hidden;
+  /* background-color: violet; */
+}
+
+main > .list-container > .swiper-container > .swiper-wrapper > .swiper-slide {
+  width: 270px;
+  max-height: 480px;
+  display: grid;
+  grid-template-rows: 250px auto;
+  border-radius: 12px;
+  box-shadow: 12px 25px 2px 0 rgba(0, 0, 0, 0.1);
+  /* background: linear-gradient(rgba(233,106,106, 0.2), rgba(233,106,106, 0.5) 50%); */
+  background: linear-gradient(rgba(233,106,106, 0.5), rgba(255,255,255,0.8) 0%);
+  transition: .4s;
+}
+
+.swiper-slide-active {
+  box-shadow: 14px 30px 5px 0 rgba(0, 0, 0, 0.1) !important;
+  transform: scale(1.1) !important;
+}
+
+main > .list-container > .swiper-container > .swiper-wrapper > .swiper-slide > .product-image {
+  height: 250px;
+  text-align: center;
+  padding: 20px;
+  /* background-color: turquoise; */
+}
+
+main > .list-container > .swiper-container > .swiper-wrapper > .swiper-slide > .product-image > img {
+  height: 105%;
+  width: 55%;
+  border-radius: 40px;
+  /* width: 70%; */
+  transition: .3s;
+}
+
+main > .list-container > .swiper-container > .swiper-wrapper > .swiper-slide-active > .product-image > img:hover {
+  border-radius: 10px;
+  transform: scale(1.1);
+  transition: .3s;
+}
+
+main > .list-container > .swiper-container > .swiper-wrapper > .swiper-slide > .product-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-color: gray; */
+}
+
+.product-info > .product-title {
+  color: #747474;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 12px;
+  /* background-color: red; */
+}
+
+.product-info > .product-desc {
+  color: #a8a8a8;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 12px;
+  /* background-color: khaki; */
+}
+
+.product-info > .product-price {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #444;
+  font-size: 26px;
+  font-weight: 700;
+  /* background-color: lightcoral; */
+}
+
+.product-info > .product-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #ffcccc;
+  /* background-color: magenta; */
+}
+
+.product-info > .product-options > i {
+  color: #ffcccc;
+  cursor: pointer;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .product-info > .product-options > i:hover {
+    color: #e61f1f;
+  }
+}
+
+.product-info > .product-options > i.icon-clicked {
+  color: #e61f1f;
+}
+
+.product-info > .product-options > a {
+  font-size: 14px;
+  font-weight: 700;
+  color: #e96a6a;
+  padding: 4px 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 16px;
+  transition: .3s;
+}
+
+.product-info > .product-options > a:hover {
+  background-color: #e96a6a;
+  color: #fff;
+}
+
+.product-info > .product-options > a:active {
+  opacity: 0.2;
+}
+
+.footer-copyright {
+  width: 100%;
+  height: 30px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* background-color: crimson; */
+}
+
+.footer-copyright > span {
+  font-size: 0.8em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #e96a6a77;
+}
