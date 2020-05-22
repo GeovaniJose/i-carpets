@@ -60,3 +60,11 @@ new Promise((resolve, reject) => {
   
   setTimeout(() => {swiperWrapper.style.visibility = 'visible'}, 300)
 })
+
+const iconsEl = document.querySelectorAll('.product-options > i')
+iconsEl.forEach(icon => {
+  icon.addEventListener('click', () => {
+    icon.classList.toggle('icon-clicked')
+    icon.classList.toggle('icon-clicked-effect')
+  })
+})

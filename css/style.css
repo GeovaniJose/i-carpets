@@ -175,6 +175,25 @@ main > .list-container > .swiper-container > .swiper-wrapper > .swiper-slide > .
   color: #e61f1f;
 }
 
+.product-info > .product-options > i.icon-clicked-effect{
+  animation: iconEf 0.4s linear;
+}
+
+@keyframes iconEf {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    /* transform: scale(4); */
+    transform: translateY(-23px);
+  }
+}
+
 .product-info > .product-options > a {
   font-size: 14px;
   font-weight: 700;
