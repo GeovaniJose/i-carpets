@@ -25,7 +25,7 @@ new Promise((resolve, reject) => {
   
           <section class="product-options">
             <i class="fas fa-heart"></i>
-            <a href="">Encomendar</a>
+            <a href="#carpetInfo">Encomendar</a>
           </section>
         </div>
       </div>`
