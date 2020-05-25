@@ -139,14 +139,23 @@ main > .list-container > .swiper-container > .swiper-wrapper > .swiper-slide > .
 }
 
 .product-info > .product-price {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
   color: #444;
   font-size: 26px;
   font-weight: 700;
   /* background-color: lightcoral; */
+}
+
+.product-info > .product-price::after {
+  content: 'cada';
+  position: absolute;
+  bottom: -7px;
+  right: 0;
+  font-size: 12px;
+  font-weight: 100;
+  color: #a8a8a8;
 }
 
 .product-info > .product-options {
